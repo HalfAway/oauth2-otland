@@ -36,6 +36,8 @@ try {
 
     var_dump($owner->toArray());
 
+} catch (Exception $e) {
+    // Log errors...
 }
 ```
 
@@ -70,6 +72,6 @@ try {
     dd($owner->toArray());
 
 } catch (Exception $e) {
-    return redirect('/');
+    // Log errors...
 }
 ```
