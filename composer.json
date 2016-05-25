@@ -1,0 +1,23 @@
+{
+    "name": "pandaac/oauth2-otland",
+    "keywords": ["pandaac", "otland", "tibia", "opentibia", "oauth2", "api", "oauth"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Christopher Eklund",
+            "email": "eklundchristopher@gmail.com",
+            "homepage": "https://eklundchristopher.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "league/oauth2-client": "~1.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "pandaac\\OAuth2OtLand\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
