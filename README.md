@@ -1,4 +1,5 @@
 # OAuth2 Client for OtLand.net
+Have your site users login through their OtLand.net accounts.
 
 ## Requirements
 + PHP 5.5.9+
