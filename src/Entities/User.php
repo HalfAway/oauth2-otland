@@ -7,6 +7,13 @@ use League\OAuth2\Client\Provider\ResourceOwnerInterface;
 class User implements ResourceOwnerInterface
 {
     /**
+     * Holds all of the response attributes.
+     *
+     * @param array
+     */
+    protected $response;
+
+    /**
      * Holds the user ID.
      *
      * @var integer
@@ -49,15 +56,31 @@ class User implements ResourceOwnerInterface
     protected $avatar;
 
     /**
+     * Create a new instance of the entity.
+     *
+     * @param  array  $attributes  []
+     * @return void
      */
     public function __construct(array $attributes = [])
     {
+        $this->response = $attributes;
+
         $this->id = $attributes['user']['user_id'];
         $this->username = $attributes['user']['username'];
         $this->title = $attributes['user']['user_title'];
         $this->email = $attributes['user']['user_email'];
         $this->link = $attributes['user']['links']['permalink'];
         $this->avatar = $attributes['user']['links']['avatar'];
+    }
+
+    /**
+     * Returns the response attributes.
+     *
+     * @return array
+     */
+    public function getResponseAttributes()
+    {
+        return $this->response;
     }
 
     /**
@@ -128,12 +151,13 @@ class User implements ResourceOwnerInterface
     public function toArray()
     {
         return [
-            'id'        => $this->getId(),
-            'username'  => $this->getUsername(),
-            'title'     => $this->getTitle(),
-            'email'     => $this->getEmail(),
-            'avatar'    => $this->getAvatar(),
-            'profile'   => $this->getProfileUri(),
+            'id'            => $this->getId(),
+            'username'      => $this->getUsername(),
+            'title'         => $this->getTitle(),
+            'email'         => $this->getEmail(),
+            'avatar'        => $this->getAvatar(),
+            'profile'       => $this->getProfileUri(),
+            '_attributes'   => $this->getResponseAttributes(),
         ];
     }
 }
