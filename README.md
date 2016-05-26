@@ -34,7 +34,7 @@ $router->get('/otland', function (Request $request) {
 
         $otland = app(OtLand::class);
 
-        // Redirect the user to the authorization url
+        // Redirect the user to the authorization url if no code was provided
         if (! $request->has('code')) {
             $url = $otland->getAuthorizationUrl();
 
@@ -79,6 +79,7 @@ try {
         'redirectUri'   => 'MY-REDIRECT-URI',
     ]);
 
+    // Redirect the user to the authorization url if no code was provided
     if (! isset($_GET['code'])) {
         $url = $otland->getAuthorizationUrl();
 
@@ -88,6 +89,7 @@ try {
         exit;
     }
 
+    // If the state is invalid, redirect the user
     if (! isset($_GET['state']) or ($_GET['state'] !== $_SESSION['oauth2state'])) {
         unset($_SESSION['oauth2state']);
 
