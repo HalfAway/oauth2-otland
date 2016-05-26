@@ -16,15 +16,15 @@ If composer isn't an option for you, you may install this package manually. The 
 
 ### Examples
 ##### Laravel 5.x
-Add the `pandaac\OAuth2OtLand\FrameworkIntegration\Laravel\OtLandOAuth2ServiceProvider::class` service provider to the `./config/app.php` service providers array.
-
-Publish the package configuration files by running the following artisan command
+Add the OtLand OAuth2 client service provider to the service providers array in `./config/app.php`.
+```php
+pandaac\OAuth2OtLand\FrameworkIntegration\Laravel\OtLandOAuth2ServiceProvider::class
+```
+You should then publish the package configuration files by running the following artisan command
 ```
 php artisan vendor:publish --provider="pandaac\OAuth2OtLand\FrameworkIntegration\Laravel\OtLandOAuth2ServiceProvider"
 ```
-
-and then define a route as seen below
-
+and finally define a route similiar to that as shown below
 ```php
 use Illuminate\Http\Request;
 use pandaac\OAuth2OtLand\Providers\OtLand;
