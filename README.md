@@ -4,7 +4,7 @@ This package allows your site users to authenticate themselves through their OtL
 ## Requirements
 + PHP 5.5.9+
 + OtLand client credentials
-  - The only way to receive your own client ID & secret is by sending [@Mark](https://otland.net/members/mark.1/) a private message requesting it. You will have to provide him with a project name, a short description of it, as well as a redirect uri. It is then up to him whether you'll be granted the necessary credentials or not.
+  - The only way to receive your own client ID & secret is by sending [@Mark](https://otland.net/members/mark.1/) a private message requesting it. You will have to provide him with a project name, a short description of it, as well as a redirect URI. It is then up to him whether you'll be granted the necessary credentials or not.
 
 ## Install
 ##### Via Composer
