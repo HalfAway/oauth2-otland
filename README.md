@@ -26,7 +26,7 @@ You should then publish the package configuration files by running the following
 php artisan vendor:publish --provider="pandaac\OAuth2OtLand\FrameworkIntegration\Laravel\OtLandOAuth2ServiceProvider"
 ```
 
-> _You may edit these directly in `./config/oauth2-otland.php`, although it is strongly recommended to do so through your `.env` file instead (`OTLAND_KEY`, `OTLAND_SECRET` & `OTLAND_REDIRECT`)._
+> _You may edit your OAuth2 credentials directly in `./config/oauth2-otland.php`, although it is strongly recommended to do so through your `.env` file instead (`OTLAND_KEY`, `OTLAND_SECRET` & `OTLAND_REDIRECT`)._
 
 and finally define a route similiar to that as shown below
 ```php
