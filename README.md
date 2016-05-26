@@ -113,3 +113,8 @@ try {
     // Log errors...
 }
 ```
+
+## Contributing
+Please refer to the [PSR-2 guidelines](http://www.php-fig.org/psr/psr-2/) and squash your commits together into one before submitting a pull request.
+
+Thank you.
