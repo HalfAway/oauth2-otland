@@ -14,14 +14,15 @@ composer require pandaac/oauth2-otland
 
 ## OAuth2 Options
 When instantiating the `pandaac\OAuth2OtLand\Providers\OtLand` object, you may pass an array of options as its first argument.
-##### Client ID _(required)_
-Assign your Client ID to the `clientId` key.
-##### Client Secret _(required)_
-Assign your Client Secret to the `clientSecret` key.
-##### Redirect URI _(required)_
-Assign your Redirect URI to the `redirectUri` key.
-##### Scopes
-Assign your scopes as an array to the `scope` key. It defaults to `['read']`.
+
++ **Client ID _(required)_**  
+  Assign your Client ID to the `clientId` key.
++ **Client Secret _(required)_**  
+  Assign your Client Secret to the `clientSecret` key.
++ **Redirect URI _(required)_**  
+  Assign your Redirect URI to the `redirectUri` key.
++ **Scopes**  
+  Assign your scopes as an array to the `scope` key. It defaults to `['read']`.
 
 > _The API that OtLand.net uses is [bdApi](https://github.com/xfrocks/bdApi/blob/master/docs/api.markdown). Please refer to their documentation for anything beyond simple authorization._
 
