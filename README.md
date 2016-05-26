@@ -20,7 +20,10 @@ Add the OtLand OAuth2 client service provider to the service providers array in 
 ```php
 pandaac\OAuth2OtLand\FrameworkIntegration\Laravel\OtLandOAuth2ServiceProvider::class
 ```
-You should then publish the package configuration files by running the following artisan command
+You should then publish the package configuration files by running the following artisan command.
+
+> _You may edit these directly in `./config/oauth2-otland.php`, although it is strongly recommended to do so through your `.env` file instead (`OTLAND_KEY`, `OTLAND_SECRET` & `OTLAND_REDIRECT`)._
+
 ```
 php artisan vendor:publish --provider="pandaac\OAuth2OtLand\FrameworkIntegration\Laravel\OtLandOAuth2ServiceProvider"
 ```
