@@ -1,3 +1,5 @@
+![Abandoned](https://raw.githubusercontent.com/eklundchristopher/resources/master/abandoned/abandoned.png)
+
 # OAuth2 Client for OtLand.net
 This package allows your site users to authenticate themselves through their OtLand.net account, which in turn returns an object with their OtLand details for you to do which what you see fit.
 
