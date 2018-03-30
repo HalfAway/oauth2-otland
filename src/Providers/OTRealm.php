@@ -50,7 +50,7 @@ class OTRealm extends AbstractProvider
      */
     public function getResourceOwnerDetailsUrl(AccessToken $token)
     {
-        return sprintf('%s/api/index.php?users/me?oauth_token=%s', $this->baseUrl, $token->getToken());
+        return sprintf('%s/api/index.php?users/me&oauth_token=%s', $this->baseUrl, $token->getToken());
     }
 
     /**
